@@ -1,7 +1,21 @@
 # Lost-Cities
-Heavy Mod Version of Dragon Knight
-Lost Cities
-Readme
+Heavy Mod Version of Dragon Knight. 
+
+- Over 75 New or Modified Mods
+- 200 Plus Levels
+- 53 Different Character types/Races
+- Graphic Interfaces for all Town Square Functions
+- 72 Different Graphics for Map Exploring
+- 50 Plus Random Events
+- 12 Advance Random Events
+- Many Quests
+- 6 Very Advance Quests
+- Approx. 700 Items (Weapons, Shields, Boots, Gloves, Range Weapons, Pets, Armor, Magic Rings)
+    For Defense and offensive use for your Character
+- Betting Houses
+- Besides the Gold Coins, you can also trade in Silver and Copper Coins
+
+Lost Cities Readme
 
 ### INTRODUCTION ###
 Lost Cities
