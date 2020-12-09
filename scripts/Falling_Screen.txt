@@ -1,0 +1,92 @@
+Falling Claus
+
+<marquee behavior=scroll direction=down scrollamount=2 scrolldelay=33 height=597 style='position:absolute; left:25%; top:13px; width:50; height:597px;'><img src=http://dl7.glitter-graphics.net/pub/23/23957mbx9ar6pln.gif border=0></marquee>
+<marquee behavior=scroll direction=down scrollamount=2 scrolldelay=14 height=628 style='position:absolute; left:26%; top:150px; width:50; height:628px;'><img src=http://dl7.glitter-graphics.net/pub/23/23957mbx9ar6pln.gif border=0></marquee>
+<marquee behavior=scroll direction=down scrollamount=2 scrolldelay=11 height=566 style='position:absolute; left:39%; top:152px; width:50; height:566px;'><img src=http://dl7.glitter-graphics.net/pub/23/23957mbx9ar6pln.gif border=0></marquee>
+<marquee behavior=scroll direction=down scrollamount=2 scrolldelay=19 height=611 style='position:absolute; left:77%; top:125px; width:50; height:611px;'><img src=http://dl7.glitter-graphics.net/pub/23/23957mbx9ar6pln.gif border=0></marquee>
+<marquee behavior=scroll direction=down scrollamount=6 scrolldelay=31 height=552 style='position:absolute; left:66%; top:69px; width:50; height:552px;'><img src=http://dl7.glitter-graphics.net/pub/23/23957mbx9ar6pln.gif border=0></marquee>
+<marquee behavior=scroll direction=down scrollamount=2 scrolldelay=5 height=683 style='position:absolute; left:31%; top:98px; width:50; height:683px;'><img src=http://dl7.glitter-graphics.net/pub/23/23957mbx9ar6pln.gif border=0></marquee>
+<marquee behavior=scroll direction=down scrollamount=3 scrolldelay=23 height=670 style='position:absolute; left:5%; top:140px; width:50; height:670px;'><img src=http://dl7.glitter-graphics.net/pub/23/23957mbx9ar6pln.gif border=0></marquee>
+<marquee behavior=scroll direction=down scrollamount=2 scrolldelay=22 height=672 style='position:absolute; left:51%; top:136px; width:50; height:672px;'><img src=http://dl7.glitter-graphics.net/pub/23/23957mbx9ar6pln.gif border=0></marquee>
+<marquee behavior=scroll direction=down scrollamount=1 scrolldelay=22 height=698 style='position:absolute; left:51%; top:182px; width:50; height:698px;'><img src=http://dl7.glitter-graphics.net/pub/23/23957mbx9ar6pln.gif border=0></marquee>
+<marquee behavior=scroll direction=down scrollamount=5 scrolldelay=46 height=649 style='position:absolute; left:52%; top:95px; width:50; height:649px;'><img src=http://dl7.glitter-graphics.net/pub/23/23957mbx9ar6pln.gif border=0></marquee>
+<marquee behavior=scroll direction=down scrollamount=1 scrolldelay=29 height=698 style='position:absolute; left:31%; top:87px; width:50; height:698px;'><img src=http://dl7.glitter-graphics.net/pub/23/23957mbx9ar6pln.gif border=0></marquee>
+<marquee behavior=scroll direction=down scrollamount=2 scrolldelay=27 height=665 style='position:absolute; left:75%; top:50px; width:50; height:665px;'><img src=http://dl7.glitter-graphics.net/pub/23/23957mbx9ar6pln.gif border=0></marquee>
+<marquee behavior=scroll direction=down scrollamount=4 scrolldelay=26 height=670 style='position:absolute; left:33%; top:27px; width:50; height:670px;'><img src=http://dl7.glitter-graphics.net/pub/23/23957mbx9ar6pln.gif border=0></marquee>
+<marquee behavior=scroll direction=down scrollamount=2 scrolldelay=17 height=666 style='position:absolute; left:82%; top:167px; width:50; height:666px;'><img src=http://dl7.glitter-graphics.net/pub/23/23957mbx9ar6pln.gif border=0></marquee>
+<marquee behavior=scroll direction=down scrollamount=5 scrolldelay=49 height=612 style='position:absolute; left:75%; top:62px; width:50; height:612px;'><img src=http://dl7.glitter-graphics.net/pub/23/23957mbx9ar6pln.gif border=0></marquee>
+<marquee behavior=scroll direction=down scrollamount=4 scrolldelay=32 height=696 style='position:absolute; left:56%; top:174px; width:50; height:696px;'><img src=http://dl7.glitter-graphics.net/pub/23/23957mbx9ar6pln.gif border=0></marquee>
+<marquee behavior=scroll direction=down scrollamount=2 scrolldelay=17 height=598 style='position:absolute; left:9%; top:2px; width:50; height:598px;'><img src=http://dl7.glitter-graphics.net/pub/23/23957mbx9ar6pln.gif border=0></marquee>
+<marquee behavior=scroll direction=down scrollamount=6 scrolldelay=11 height=645 style='position:absolute; left:69%; top:52px; width:50; height:645px;'><img src=http://dl7.glitter-graphics.net/pub/23/23957mbx9ar6pln.gif border=0></marquee>
+<marquee behavior=scroll direction=down scrollamount=5 scrolldelay=33 height=612 style='position:absolute; left:16%; top:115px; width:50; height:612px;'><img src=http://dl7.glitter-graphics.net/pub/23/23957mbx9ar6pln.gif border=0></marquee>
+<marquee behavior=scroll direction=down scrollamount=3 scrolldelay=15 height=592 style='position:absolute; left:29%; top:44px; width:50; height:592px;'><img src=http://dl7.glitter-graphics.net/pub/23/23957mbx9ar6pln.gif border=0></marquee>
+
+
+Falling Sword/Cross
+
+<marquee behavior=scroll direction=down scrollamount=5 scrolldelay=6 height=531 style='position:absolute; left:40%; top:200px; width:20; height:531px;'><font size=+3>†</font></marquee>
+<marquee behavior=scroll direction=down scrollamount=2 scrolldelay=42 height=558 style='position:absolute; left:35%; top:185px; width:20; height:558px;'><font size=+3>†</font></marquee>
+<marquee behavior=scroll direction=down scrollamount=6 scrolldelay=35 height=658 style='position:absolute; left:16%; top:79px; width:20; height:658px;'><font size=+3>†</font></marquee>
+<marquee behavior=scroll direction=down scrollamount=6 scrolldelay=19 height=659 style='position:absolute; left:47%; top:13px; width:20; height:659px;'><font size=+3>†</font></marquee>
+<marquee behavior=scroll direction=down scrollamount=4 scrolldelay=44 height=650 style='position:absolute; left:38%; top:165px; width:20; height:650px;'><font size=+3>†</font></marquee>
+<marquee behavior=scroll direction=down scrollamount=2 scrolldelay=5 height=700 style='position:absolute; left:15%; top:113px; width:20; height:700px;'><font size=+3>†</font></marquee>
+<marquee behavior=scroll direction=down scrollamount=5 scrolldelay=13 height=678 style='position:absolute; left:77%; top:33px; width:20; height:678px;'><font size=+3>†</font></marquee>
+<marquee behavior=scroll direction=down scrollamount=6 scrolldelay=6 height=613 style='position:absolute; left:20%; top:13px; width:20; height:613px;'><font size=+3>†</font></marquee>
+<marquee behavior=scroll direction=down scrollamount=4 scrolldelay=25 height=600 style='position:absolute; left:67%; top:10px; width:20; height:600px;'><font size=+3>†</font></marquee>
+<marquee behavior=scroll direction=down scrollamount=3 scrolldelay=8 height=522 style='position:absolute; left:73%; top:158px; width:20; height:522px;'><font size=+3>†</font></marquee>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

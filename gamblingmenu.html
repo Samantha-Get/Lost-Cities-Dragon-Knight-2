@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Wed, 12 Apr 2017 23:57:29 GMT">
+    <meta name="description" content="Dragon Knight ReMod v2 by ES-Archangel, Archangel HeavenWeb Archangel Age of Kings">
+    <meta name="keywords" content="Dragon Knight 3133 ReMod v3">
+    <title>Gambling Menu</title>
+	
+<style type="text/css">
+
+body {
+  background-image: url(images/background.jpg);
+  color: black;
+  font-family: Trebuchet MS, Verdana, Fantasy;
+  font-size: 13px; 
+}
+
+td, input, select, textarea {
+  font-family: Trebuchet MS, Verdana, Fantasy;
+  font-size: 13px; 
+  font-weight:bold;
+   }
+   
+input, select, textarea {
+  font-family: Trebuchet MS, Verdana, Fantasy;
+  font-size: 13px; 
+  border-style:outset;
+  border-color:#eeeeee;
+  color:#000000;
+}
+
+table {
+  border-style: none;
+  padding: 0px;
+  font-family: Trebuchet MS, Verdana, Fantasy;
+  font-size: 13px; 
+}
+
+td {
+  border-style: none;
+  padding: 1px;
+  vertical-align: top;
+}
+
+td.top {
+  border-bottom: solid 1px black;
+}
+
+td.left {
+  width: 180px;
+  border-right: solid 1px black;
+}
+
+td.right {
+  width: 180px;
+  border-left: solid 1px black;
+}
+
+a {
+    color: #663300;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover {
+    color: #330000;
+}
+
+.small {
+  font-family: Verdana, Trebuchet MS, Fantasy;
+  font-size: 10px; 
+}
+
+.highlight {
+  color: red;
+}
+
+.light {
+  color: #999999;
+}
+
+.copyright {
+  border: solid 1px black;
+  background-color: #eeeeee;
+  font-family: Verdana, Trebuchet MS, Fantasy;
+  font-size: 10px; 
+}
+
+.title {
+  border: solid 1px black;
+  background-color: #eeeeee;
+  font-weight: bold;
+  padding: 1px;
+  margin: 1px;
+}
+
+.whiteonblack {
+  font-family: Verdana, Trebuchet MS, Fantasy;
+  font-size: 13px; 
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+  font-variant: normal;
+  color: #000000;
+  background: #FFFFFF;
+  text-align: center;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-left: 3px ridge #C0C0C0;
+  border-right: 3px groove #C0C0C0;
+  border-top: 3px groove #C0C0C0;
+  border-bottom: 3px groove #C0C0C0;
+  }
+
+.blackonwhite{
+  font-family: Verdana, Trebuchet MS, Fantasy;
+  font-size: 13px; 
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+  font-variant: normal;
+  color: #FFFFFF;
+  background: #000000;
+  text-align: center;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-left: 3px ridge #C0C0C0;
+  border-right: 3px groove #C0C0C0;
+  border-top: 3px groove #C0C0C0;
+  border-bottom: 3px groove #C0C0C0;
+  }
+  
+  
+
+.myButton2 {
+	-moz-box-shadow: 1px 2px 0px 0px #899599;
+	-webkit-box-shadow: 1px 2px 0px 0px #899599;
+	box-shadow: 1px 2px 0px 0px #899599;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #bab1ba));
+	background:-moz-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+	background:-webkit-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+	background:-o-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+	background:-ms-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+	background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#bab1ba',GradientType=0);
+	background-color:#ededed;
+	-moz-border-radius:7px;
+	-webkit-border-radius:7px;
+	border-radius:7px;
+	border:1px solid #d6bcd6;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Verdana;
+	font-size:11px;
+	padding:3px 14px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #e1e2ed;
+}
+.myButton2:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bab1ba), color-stop(1, #ededed));
+	background:-moz-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+	background:-webkit-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+	background:-o-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+	background:-ms-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+	background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bab1ba', endColorstr='#ededed',GradientType=0);
+	background-color:#bab1ba;
+}
+.myButton2:active {
+	position:relative;
+	top:1px;
+}
+</style>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+</head>
+<body>
+<center><h3 class="title">General Gambling</h3></center>
+
+<center>
+<blockquote>
+<table width="70%">
+<tr>
+<td><center><h3 class="title">In-Town Locations</h3></center></td>
+<td><center><h3 class="title">Games - No Betting</h3></center></td>
+<td><center><h3 class="title">Money Resources</h3></center></td>
+</tr>
+<tr valign="top" style="top">
+     <td align="left" valign="top">
+<ul>
+Town Options:
+<li /><a href="index.php">Town Square</a>
+<li /><a href="index.php?do=inn">Rest at Inn</a>
+<li /><a href="index.php?do=towninf">Town Information</a>
+<li /><a href="index.php?do=npclist">Talk to Local Villagers</a>
+<li /><a href="index.php?do=getquests">Available Quests</a>
+</ul>
+</td>
+ <td align="left" valign="top">
+<ul>
+Just for Fun (Non Game Related):
+<li /><a href="../../bs/index.html" target="_blank">Battle Ship</a>
+<li /><a href="../../keno/index.html" target="_blank">Keno</a>
+<li /><a href="../../wolf3d/index.php" target="_blank">Wolf 3D</a>
+<li /><a href="scripts/hearts/index.php" target="_blank">Hearts</a>
+<li /><a href="scripts/cardpoker/cardpoker.html" target="_blank">Card Poker</a>
+<li /><a href="http://michaelmccart.com/phpadv/game_goldenskull.php" target="_blank">Golden Skill</a>  <font color="#FF0000">Under Construction</font>
+</ul>
+</td>
+ <td align="left" valign="top">
+<ul>Money:
+<li /><a href="index.php?do=bank">The Bank</a>
+<li /><a href="index.php?do=sendgold">Send gold</a>
+<li /><a href="index.php?do=robb">Rob Bank</a>
+<li /><a href="index.php?do=broker">Broker</a>
+<li /><a href="index.php?do=exchange">Exchange</a>
+</ul>
+</td>
+</tr></table>
+<a href="index.php" class="myButton2">Back to Town Square</a><br />
+</blockquote></center>
+
+
+<center>
+<blockquote>
+<table width="70%">
+<tr valign="top" style="top">
+     <td align="left" valign="top" width="50%" ><center><h3 class="title">Lottery Games</h3></center></td>
+     <td align="left" valign="top" width="50%"><center><h3 class="title">Dice Games</h3></center></td>
+</tr>
+<tr>
+<td align="left" valign="top" width="50%">
+<ul>Lottery Houses:
+<li /><a href='index.php?do=loteri10'>Lottery: 10 Gold Coins</a>
+<br />
+<ul type="square">
+    <lh>Lottery 10 Odds</lh>
+    <li>1 number right = <font color="#FFFF9F">0 Gold Coins</font></li>
+    <li>2 numbers right = <font color="#FFFF9F">10 Gold Coins</font></li>
+    <li>3 numbers right = <font color="#FFFF9F">60 Gold Coins</font></li>
+    <li>4 numbers right = <font color="#FFFF9F">320 Gold Coins</font></li>
+    <li>5 numbers right = <font color="#FFFF9F">800 Gold Coins</font></li>
+</ul> 
+<li /><a href='index.php?do=loteri'>Lottery: 20 Gold Coins</a>
+<br />
+<ul type="square">
+    <lh>Lottery 20 Odds</lh>
+    <li>1 number right = <font color="#FFFF9F">0 Gold Coins</font></li>
+    <li>2 numbers right = <font color="#FFFF9F">20 Gold Coins</font></li>
+    <li>3 numbers right = <font color="#FFFF9F">120 Gold Coins</font></li>
+    <li>4 numbers right = <font color="#FFFF9F">640 Gold Coins</font></li>
+    <li>5 numbers right = <font color="#FFFF9F">1,600 Gold Coins</font></li>	
+</ul>
+<li /><a href='index.php?do=loteri50'>Lottery: 50 Gold Coins</a>
+<br />
+<ul type="square">
+    <lh>Lottery 50 Odds</lh>
+    <li>1 number right = <font color="#FFFF9F">0 Gold Coins</font></li>
+    <li>2 numbers right = <font color="#FFFF9F">100 Gold Coins</font></li>
+    <li>3 numbers right = <font color="#FFFF9F">300 Gold Coins</font></li>
+    <li>4 numbers right = <font color="#FFFF9F">1,200 Gold Coins</font></li>
+    <li>5 numbers right = <font color="#FFFF9F">6,000 Gold Coins</font></li>
+</ul> 
+<li /><a href='index.php?do=loteri100'>Lottery: 100 Gold Coins</a>
+<br />
+<ul type="square">
+    <lh>Lottery 100 Odds</lh>
+    <li>1 number right = <font color="#FFFF9F">0 Gold Coins</font></li>
+    <li>2 numbers right = <font color="#FFFF9F">200 Gold Coins</font></li>
+    <li>3 numbers right = <font color="#FFFF9F">600 Gold Coins</font></li>
+    <li>4 numbers right = <font color="#FFFF9F">2,400 Gold Coins</font></li>
+    <li>5 numbers right = <font color="#FFFF9F">12,000 Gold Coins</font></li>
+</ul> 
+</ul>
+</td>
+
+<td align="left" valign="top" width="50%">
+<ul>Dice Houses:
+<li /><a href='index.php?do=dicingbet4'>Dice: 5 Silver Coins</a>
+<br />
+<ul type="square">
+    <lh>Dice 5 Odds</lh>
+    <li>Number between 3 and 7 = <font color="#FFFF9F">0 Silver Coins</font></li>
+    <li>Number between 8 and 11 = <font color="#FFFF9F">10 Silver Coins</font></li>
+    <li>2 or 12 number = <font color="#FFFF9F">25 Silver Coins</font></li>
+</ul> 
+<li /><a href='index.php?do=dicingbet3'>Dice: 15 Gold Coins</a>
+<br />
+<ul type="square">
+    <lh>Dice 15 Odds</lh>
+    <li>Number between 3 and 7 = <font color="#FFFF9F">0 Gold Coins</font></li>
+    <li>Number between 8 and 11 = <font color="#FFFF9F">30 Gold Coins</font></li>
+    <li>2 or 12 number = <font color="#FFFF9F">75 Gold Coins</font></li>
+</ul> 
+<li /><a href='index.php?do=dicingbet'>Dice: 30 Gold Coins</a>
+<br />
+<ul type="square">
+    <lh>Dice 30 Odds</lh>
+    <li>Number between 3 and 7 = <font color="#FFFF9F">0 Gold Coins</font></li>
+    <li>Number between 8 and 11 = <font color="#FFFF9F">60 Gold Coins</font></li>
+    <li>2 or 12 number = <font color="#FFFF9F">150 Gold Coins</font></li>
+</ul> 
+<li /><a href='index.php?do=dicingbet1'>Dice: 50 Gold Coins</a>
+<br />
+<ul type="square">
+    <lh>Dice 50 Odds</lh>
+    <li>Number between 3 and 7 = <font color="#FFFF9F">0 Gold Coins</font></li>
+    <li>Number between 8 and 11 = <font color="#FFFF9F">100 Gold Coins</font></li>
+    <li>2 or 12 number = <font color="#FFFF9F">250 Gold Coins</font></li>
+</ul> 
+<li /><a href='index.php?do=dicingbet2'>Dice: 100 Gold Coins</a>
+<br />
+<ul type="square">
+    <lh>Dice 100 Odds</lh>
+    <li>Number between 3 and 7 = <font color="#FFFF9F">0 Gold Coins</font></li>
+    <li>Number between 8 and 11 = <font color="#FFFF9F">200 Gold Coins</font></li>
+    <li>2 or 12 number = <font color="#FFFF9F">500 Gold Coins</font></li>
+</ul> 
+</ul>
+</td></tr></table> 
+</blockquote>
+</center>
+
+
+
+
+<center>
+<blockquote>
+<table width="70%">
+<tr valign="top" style="top">
+     <td align="left" valign="top" width="50%" ></td>
+     <td align="left" valign="top" width="50%"><center><h3 class="title">Lottery w/High Scores</h3></center></td>
+</tr>
+<tr>
+<td align="left" valign="top" width="50%">
+
+</td>
+
+
+<td align="left" valign="top" width="50%">
+<ul>Lottery Hi-Scoring: We apologize, this Game is Broken presntly.
+<li /><a href='index.php?do=lottery_presentation'>50 GC Lottery Hi-Scoring</a>
+<br />
+<ul type="square">
+    <lh>Odds One out of Three</lh>
+    <li>Win = <font color="#FFFF9F">50 to 125 Gold Coins</font></li>
+    <li>Lose = <font color="#FFFF9F">Lose Betting Gold Coins</font></li>
+</ul> 
+<li /><a href='index.php?do=lottery_presentation100'>100 GC Lottery Hi-Scoring</a>
+<br />
+<ul type="square">
+    <lh>Odds One out of Three</lh>
+    <li>Win = <font color="#FFFF9F">100 to 250 Gold Coins</font></li>
+    <li>Lose = <font color="#FFFF9F">Lose Betting Gold Coins</font></li>
+</ul> 
+<li /><a href='index.php?do=lottery_presentation250'>250 GC Lottery Hi-Scoring</a>
+<br />
+<ul type="square">
+    <lh>Odds One out of Three</lh>
+    <li>Win = <font color="#FFFF9F">250 to 400 Gold Coins</font></li>
+    <li>Lose = <font color="#FFFF9F">Lose Betting Gold Coins</font></li>
+</ul> 
+<li /><a href='index.php?do=lottery_presentation500'>500 GC Lottery Hi-Scoring</a>
+<br />
+<ul type="square">
+    <lh>Odds One out of Three</lh>
+    <li>Win = <font color="#FFFF9F">500 to 800 Gold Coins</font></li>
+    <li>Lose = <font color="#FFFF9F">Lose Betting Gold Coins</font></li>
+</ul> 
+</td>
+
+</tr></table> 
+<br />
+<div align="center"><a href="index.php" class="myButton2">Town Square</a></div>
+<br />
+</blockquote>
+</center>
+
+
+<br /><br />
+<center><h3 class="title">General Gambling</h3></center>
+<br /><br /><br />
+</body>
+</html>
+
+
+
+ 
+ 

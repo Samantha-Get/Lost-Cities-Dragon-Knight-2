@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Sat, 10 Jun 2017 10:22:23 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+   <title></title>
+  </head>
+  <body>
+  
+  =====================================
+
+  ALTER TABLE `dk_users` ADD `str_potion` INT( 11 ) NOT NULL DEFAULT '1';
+  ALTER TABLE `dk_users` ADD `dex_potion` INT( 11 ) NOT NULL DEFAULT '1';
+  ALTER TABLE `dk_users` ADD `att_potion` INT( 11 ) NOT NULL DEFAULT '1';
+  ALTER TABLE `dk_users` ADD `def_potion` INT( 11 ) NOT NULL DEFAULT '1';
+  ALTER TABLE `dk_users` ADD `eb_potion` INT( 11 ) NOT NULL DEFAULT '1';
+  ALTER TABLE `dk_users` ADD `gb_potion` INT( 11 ) NOT NULL DEFAULT '1';
+
+  ALTER TABLE `dk_users` ADD `currentstr` INT( 11 ) NOT NULL DEFAULT '1';
+  ALTER TABLE `dk_users` ADD `currentdex` INT( 11 ) NOT NULL DEFAULT '1';
+  ALTER TABLE `dk_users` ADD `currentatt` INT( 11 ) NOT NULL DEFAULT '1';
+  ALTER TABLE `dk_users` ADD `currentdef` INT( 11 ) NOT NULL DEFAULT '1';
+  ALTER TABLE `dk_users` ADD `currenteb` INT( 11 ) NOT NULL DEFAULT '1';
+  ALTER TABLE `dk_users` ADD `currentgb` INT( 11 ) NOT NULL DEFAULT '1';
+
+  ALTER TABLE `dk_users` ADD `maxstr` INT( 11 ) NOT NULL DEFAULT '1';
+  ALTER TABLE `dk_users` ADD `maxdex` INT( 11 ) NOT NULL DEFAULT '1';
+  ALTER TABLE `dk_users` ADD `maxatt` INT( 11 ) NOT NULL DEFAULT '1';
+  ALTER TABLE `dk_users` ADD `maxdef` INT( 11 ) NOT NULL DEFAULT '1';
+  ALTER TABLE `dk_users` ADD `maxeb` INT( 11 ) NOT NULL DEFAULT '1';
+  ALTER TABLE `dk_users` ADD `maxgb` INT( 11 ) NOT NULL DEFAULT '1';
+
+=================================
+
+currentstr  maxstr 	str_potion 
+currentdex  maxdex	dex_potion
+currentatt  maxatt	att_potion 
+currentdef  maxdef 	def_potion 
+currenteb   maxeb	eb_potion
+currentgb   maxgb	gb_potion
+
+==================================
+
+// Start Potions
+
+function use_potion($type)
+{
+  global $userrow, $numqueries;
+  
+  if($type == 1)
+  {
+    $current = "currenthp"; $max = "maxhp"; $type = "hp_potion"; if($userrow["hp_potion"] == 0){ 
+	$page = "<center><h3 class='title'>Using a Potion<h3><br /><blockquote><b>You Do Not Have Enough Hit Potion.
+	<br /> <a href='index.php' class='myButton2'>Back</a></b></blockquote></center>"; $die = true; }
+  }
+  
+  if($type == 2)
+  {
+    $current = "currentmp"; $max = "maxmp"; $type = "mp_potion"; if($userrow["mp_potion"] == 0){  
+	$page .= "<center><h3 class='title'>Using a Potion<h3><br /><blockquote><b>You Do Not Have Enough Magic Potion.
+	<br /> <a href='index.php' class='myButton2'>Back</a></b></blockquote></center>"; $die = true; }
+  }
+  
+  if($type == 3)
+  {
+    $current = "currenttp"; $max = "maxtp"; $type = "tp_potion"; if($userrow["tp_potion"] == 0){  
+	$page .= "<center><h3 class='title'>Using a Potion<h3><br /><blockquote><b>You Do Not Have Enough Travel Potion.
+	<br /> <a href='index.php' class='myButton2'>Back</a></b></blockquote></center>"; $die = true; }
+  }
+  
+  if($type == 4)
+  {
+    $current = "currentstr"; $max = "maxstr"; $type = "str_potion"; if($userrow["str_potion"] == 0){  
+	$page .= "<center><h3 class='title'>Using a Potion<h3><br /><blockquote><b>You Do Not Have Enough Strength Potion.
+	<br /> <a href='index.php' class='myButton2'>Back</a></b></blockquote></center>"; $die = true; }
+  }
+    
+  if($type == 5)
+  {
+    $current = "currentdex"; $max = "maxdex"; $type = "dex_potion"; if($userrow["dex_potion"] == 0){  
+	$page .= "<center><h3 class='title'>Using a Potion<h3><br /><blockquote><b>You Do Not Have Enough Dexterity Potion.
+	<br /> <a href='index.php' class='myButton2'>Back</a></b></blockquote></center>"; $die = true; }
+  }
+    
+  if($type == 6)
+  {
+    $current = "currentatt"; $max = "maxatt"; $type = "att_potion"; if($userrow["att_potion"] == 0){  
+	$page .= "<center><h3 class='title'>Using a Potion<h3><br /><blockquote><b>You Do Not Have Enough Attack Potion.
+	<br /> <a href='index.php' class='myButton2'>Back</a></b></blockquote></center>"; $die = true; }
+  }
+    
+  if($type == 7)
+  {
+    $current = "currentdef"; $max = "maxdef"; $type = "def_potion"; if($userrow["def_potion"] == 0){  
+	$page .= "<center><h3 class='title'>Using a Potion<h3><br /><blockquote><b>You Do Not Have Enough Defence Potion.
+	<br /> <a href='index.php' class='myButton2'>Back</a></b></blockquote></center>"; $die = true; }
+  }
+    
+  if($type == 8)
+  {
+    $current = "currenteb"; $max = "maxeb"; $type = "eb_potion"; if($userrow["eb_potion"] == 0){  
+	$page .= "<center><h3 class='title'>Using a Potion<h3><br /><blockquote><b>You Do Not Have Enough Experience Point Potion.
+	<br /> <a href='index.php' class='myButton2'>Back</a></b></blockquote></center>"; $die = true; }
+  }  
+  
+  if($type == 9)
+  {
+    $current = "currentgb"; $max = "maxgb"; $type = "gb_potion"; if($userrow["gb_potion"] == 0){  
+	$page .= "<center><h3 class='title'>Using a Potion<h3><br /><blockquote><b>You Do Not Have Enough Gold Bonus Potion.
+	<br /> <a href='index.php' class='myButton2'>Back</a></b></blockquote></center>"; $die = true; }
+  }
+  
+  
+  if($die == false)
+  {
+    if($userrow["currentaction"] == "Fighting")
+    {
+      $page = "<center><h3 class='title'>Using a Potion<h3></center>
+	  <br /><br /><Blockquote><b>The Monster Snatches The Potion From You Before You Can Drink It
+	  <br /><a href='index.php' class='myButton2'>Back to Exploring</a></b></Blockquote>";
+      $die = true;
+      doquery("UPDATE {{table}} SET `$type` = `$type` - '1' WHERE `id` = '".$userrow["id"]."'", "users");
+    }
+    
+    if($userrow[$current] == $userrow[$max] && $die == false)
+    {
+      $page = "<center><h3 class='title'>Using a Potion<h3></center>
+	  <br /><br /><Blockquote><b>You don not need to use this Potion, You are at your maximum.
+	  <br /><a href='index.php' class='myButton2'>Back to Adventuring</a></b></Blockquote>";
+      $die = true;
+    }
+    
+    if($die == false)
+    {	  
+      $page = "<center><h3 class='title'>Using a Potion<h3>
+	  <br /><br /><Blockquote><b>You Successfully Used A Potion.<br /><a href='index.php' class='myButton2'>Back</a></b></Blockquote></center>";
+      $toheal = floor($userrow[$max] / 3);
+      $new = $userrow[$current] + $toheal;
+      if($new > $userrow[$max]){ $new = $userrow[$max]; }
+      doquery("UPDATE {{table}} SET `$type` = `$type` - '1', `$current` = '$new' WHERE `id` = '".$userrow["id"]."'", "users");
+    }
+  }
+  
+  display($page, "Potions");
+}
+
+function buy_potions()
+{
+  
+  global $userrow;
+  
+  $townquery = doquery("SELECT name,innprice FROM {{table}} WHERE latitude='".$userrow["latitude"]."' AND longitude='".$userrow["longitude"]."' LIMIT 1", "towns");
+  if (mysql_num_rows($townquery) != 1) { display("Cheat attempt detected.<br /><br />Get a life, loser.", "Error"); }
+  
+  $hp_multiplyer = 5.52;
+  $mp_multiplyer = 4.53;
+  $tp_multiplyer = 3.25;
+  $str_multiplyer = 5.14;
+  $dex_multiplyer = 4.91;
+  $att_multiplyer = 4.96;
+  $def_multiplyer = 5.37;
+  $eb_multiplyer = 16.78;
+  $gb_multiplyer = 20.29;
+  
+  $hp_price = pow($userrow["level"], $hp_multiplyer);
+  $mp_price = pow($userrow["level"], $mp_multiplyer);
+  $tp_price = pow($userrow["level"], $tp_multiplyer);
+  $str_price = pow($userrow["level"], $str_multiplyer);
+  $dex_price = pow($userrow["level"], $dex_multiplyer);
+  $att_price = pow($userrow["level"], $att_multiplyer);
+  $def_price = pow($userrow["level"], $def_multiplyer);
+  $eb_price = pow($userrow["level"], $eb_multiplyer);
+  $gb_price = pow($userrow["level"], $gb_multiplyer);
+  
+  $type = $_GET['buy'];
+  
+ 
+  $type = $_GET['buy'];
+  
+  if($type == 1)
+  {
+    $price = $hp_price;
+    if($price > $userrow["gold"]){ $page = "You Do Not Have Enough Gold."; $die = true; }
+    
+    if($die == false)
+    {
+      doquery("UPDATE {{table}} SET `hp_potion` = `hp_potion` + '1', `gold` = `gold` - '$price' WHERE `id` = '".$userrow["id"]."'", "users");
+      $page = "You Successfully Bought A Hit Points Potion.<br /><br />";
+    }
+  }
+  
+  if($type == 2)
+  {
+    $price = $mp_price;
+    if($price > $userrow["gold"]){ $page = "You Do Not Have Enough Gold."; $die = true; }
+    
+    if($die == false)
+    {
+      doquery("UPDATE {{table}} SET `mp_potion` = `mp_potion` + '1', `gold` = `gold` - '$price' WHERE `id` = '".$userrow["id"]."'", "users");
+      $page = "You Successfully Bought A Magic Points Potion.<br /><br />";
+    }
+  }
+  
+  if($type == 3)
+  {
+    $price = $tp_price;
+    if($price > $userrow["gold"]){ $page = "You Do Not Have Enough Gold."; $die = true; }
+    
+    if($die == false)
+    {
+      doquery("UPDATE {{table}} SET `tp_potion` = `tp_potion` + '1', `gold` = `gold` - '$price' WHERE `id` = '".$userrow["id"]."'", "users");
+      $page = "You Successfully Bought A Travel Points Potion.<br /><br />";
+    }
+  }
+    
+  if($type == 4)
+  {
+    $price = $str_price;
+    if($price > $userrow["gold"]){ $page = "You Do Not Have Enough Gold."; $die = true; }
+    
+    if($die == false)
+    {
+      doquery("UPDATE {{table}} SET `str_potion` = `str_potion` + '1', `gold` = `gold` - '$price' WHERE `id` = '".$userrow["id"]."'", "users");
+      $page = "You Successfully Bought A Strength Potion.<br /><br />";
+    }
+  }
+    
+  if($type == 5)
+  {
+    $price = $dex_price;
+    if($price > $userrow["gold"]){ $page = "You Do Not Have Enough Gold."; $die = true; }
+    
+    if($die == false)
+    {
+      doquery("UPDATE {{table}} SET `dex_potion` = `dex_potion` + '1', `gold` = `gold` - '$price' WHERE `id` = '".$userrow["id"]."'", "users");
+      $page = "You Successfully Bought A Dexterity Potion.<br /><br />";
+    }
+  }
+  
+   if($type == 6)
+  {
+    $price = $att_price;
+    if($price > $userrow["gold"]){ $page = "You Do Not Have Enough Gold."; $die = true; }
+    
+    if($die == false)
+    {
+      doquery("UPDATE {{table}} SET `att_potion` = `att_potion` + '1', `gold` = `gold` - '$price' WHERE `id` = '".$userrow["id"]."'", "users");
+      $page = "You Successfully Bought A Attack Power Potion.<br /><br />";
+    }
+  }
+    
+  if($type == 7)
+  {
+    $price = $def_price;
+    if($price > $userrow["gold"]){ $page = "You Do Not Have Enough Gold."; $die = true; }
+    
+    if($die == false)
+    {
+      doquery("UPDATE {{table}} SET `def_potion` = `def_potion` + '1', `gold` = `gold` - '$price' WHERE `id` = '".$userrow["id"]."'", "users");
+      $page = "You Successfully Bought A Defence Potion.<br /><br />";
+    }
+  }
+    
+  if($type == 8)
+  {
+    $price = $eb_price;
+    if($price > $userrow["gold"]){ $page = "You Do Not Have Enough Gold."; $die = true; }
+    
+    if($die == false)
+    {
+      doquery("UPDATE {{table}} SET `eb_potion` = `eb_potion` + '1', `gold` = `gold` - '$price' WHERE `id` = '".$userrow["id"]."'", "users");
+      $page = "You Successfully Bought A Experience Potion.<br /><br />";
+    }
+  }
+    
+  if($type == 9)
+  {
+    $price = $gb_price;
+    if($price > $userrow["gold"]){ $page = "You Do Not Have Enough Gold."; $die = true; }
+    
+    if($die == false)
+    {
+      doquery("UPDATE {{table}} SET `gb_potion` = `gb_potion` + '1', `gold` = `gold` - '$price' WHERE `id` = '".$userrow["id"]."'", "users");
+      $page = "You Successfully Bought A Experience Potion.<br /><br />";
+    }
+  }
+    
+  
+  $userrow = checkcookies();
+  $page .= "<center><h3 class='title'>What Potion to you want to Buy?<h3></center>";
+  $page .= "<form method='post'>";
+  $page .= "<br /><table align='center' border='1' background='images/shops/Spells.jpg' bordercolor='#EEEEBD' cellpadding='4' cellspacing='4' width='80%'><tr><td align='center'><font size='3'><font color='#FFFFFF'><b>Type</b></font></font></td><td align='center'><b><font size='3'><font color='#FFFFFF'><b>Price</b></font></font></td><td align='center'><font size='3'><font color='#FFFFFF'><b>Buy</b></font></font></td><td align='center'><font size='3'><font color='#FFFFFF'><b>(Your) Quantity</b></font></font><br><br></td></tr>";
+
+  $page .= "<tr><td><center><h3 class='title'><b>Hit Potion</b></h3></center></td>
+  <td align='center'><center><h3 class='title'><b>".number_format($hp_price)." Gold Coins</b></h3></center></td>
+  <td align='center'><a href='index.php?do=buypotions&buy=1' class='myButton2'>Buy</a></td>
+  <td align='center' valign='top'><center><h3 class='title'><b>".number_format($userrow["hp_potion"])." Potions</b></h3></center></td>
+  <td align='center' valign='top'><img src='images/items/potion-red.png' alt='Hit Points Potion'/></td></tr>";
+
+  $page .= "<tr><td><center><h3 class='title'><b>Magic Potion</b></h3></center></td>
+  <td align='center'><center><h3 class='title'><b>".number_format($mp_price)." Gold Coins</b></h3></center></td>
+  <td align='center'><a href='index.php?do=buypotions&buy=2' class='myButton2'>Buy</a></td>
+  <td align='center' valign='top'><center><h3 class='title'><b>".number_format($userrow["mp_potion"])." Potions</b></h3></center></td>
+  <td align='center' valign='top'><img src='images/items/potion-green.png' alt='Magic Points Potion'/></td></tr>";
+
+  $page .= "<tr><td><center><h3 class='title'><b>Travel Potion </b></h3></center></td>
+  <td align='center'><center><h3 class='title'><b>".number_format($tp_price)." Gold Coins</b></h3></center></td>
+  <td align='center' valign='top'><a href='index.php?do=buypotions&buy=3' class='myButton2'>Buy</a></td>
+  <td align='center'><center><h3 class='title'><b>".number_format($userrow["tp_potion"])." Potions</b></h3></center></td>
+  <td align='center' valign='top'><img src='images/items/potion-blue.png' alt='Travel Points Potion'/>";
+
+  $page .= "<tr><td><center><h3 class='title'><b>Strength Potion </b></h3></center></td>
+  <td align='center'><center><h3 class='title'><b>".number_format($str_price)." Gold Coins</b></h3></center></td>
+  <td align='center' valign='top'><a href='index.php?do=buypotions&buy=3' class='myButton2'>Buy</a></td>
+  <td align='center'><center><h3 class='title'><b>".number_format($userrow["str_potion"])." Potions</b></h3></center></td>
+  <td align='center' valign='top'><img src='images/items/potion-yellow.png' alt='Strength Potion'/>";
+
+  $page .= "<tr><td><center><h3 class='title'><b>Dexterity Potion </b></h3></center></td>
+  <td align='center'><center><h3 class='title'><b>".number_format($dex_price)." Gold Coins</b></h3></center></td>
+  <td align='center' valign='top'><a href='index.php?do=buypotions&buy=3' class='myButton2'>Buy</a></td>
+  <td align='center'><center><h3 class='title'><b>".number_format($userrow["dex_potion"])." Potions</b></h3></center></td>
+  <td align='center' valign='top'><img src='images/items/potion-grey.png' alt='Dexterity Potion'/>";
+
+  $page .= "<tr><td><center><h3 class='title'><b>Attack Potion </b></h3></center></td>
+  <td align='center'><center><h3 class='title'><b>".number_format($att_price)." Gold Coins</b></h3></center></td>
+  <td align='center' valign='top'><a href='index.php?do=buypotions&buy=3' class='myButton2'>Buy</a></td>
+  <td align='center'><center><h3 class='title'><b>".number_format($userrow["att_potion"])." Potions</b></h3></center></td>
+  <td align='center' valign='top'><img src='images/items/potion-grey.png' alt='Attack Potion'/>";
+
+  $page .= "<tr><td><center><h3 class='title'><b>Defence Potion </b></h3></center></td>
+  <td align='center'><center><h3 class='title'><b>".number_format($def_price)." Gold Coins</b></h3></center></td>
+  <td align='center' valign='top'><a href='index.php?do=buypotions&buy=3' class='myButton2'>Buy</a></td>
+  <td align='center'><center><h3 class='title'><b>".number_format($userrow["def_potion"])." Potions</b></h3></center></td>
+  <td align='center' valign='top'><img src='images/items/potion-grey.png' alt='Defence Potion'/>";
+
+  $page .= "<tr><td><center><h3 class='title'><b>Experience Potion </b></h3></center></td>
+  <td align='center'><center><h3 class='title'><b>".number_format($eb_price)." Gold Coins</b></h3></center></td>
+  <td align='center' valign='top'><a href='index.php?do=buypotions&buy=3' class='myButton2'>Buy</a></td>
+  <td align='center'><center><h3 class='title'><b>".number_format($userrow["eb_potion"])." Potions</b></h3></center></td>
+  <td align='center' valign='top'><img src='images/items/potion-grey.png' alt='Experience Potion'/>";
+
+  $page .= "<tr><td><center><h3 class='title'><b>Gold Bonus Potion </b></h3></center></td>
+  <td align='center'><center><h3 class='title'><b>".number_format($gb_price)." Gold Coins</b></h3></center></td>
+  <td align='center' valign='top'><a href='index.php?do=buypotions&buy=3' class='myButton2'>Buy</a></td>
+  <td align='center'><center><h3 class='title'><b>".number_format($userrow["gb_potion"])." Potions</b></h3></center></td>
+  <td align='center' valign='top'><img src='images/items/potion-grey.png' alt='Gold Bonus'/>";
+
+
+  $page .= "<center><b><a href='index.php' class='myButton2'>Back To Town Square</a></b></center></form><br></td></tr></table>";
+  
+  display($page, "Potion Store");
+  
+}
+
+// End Potions
+  
+
+  </body>
+</html>
+
+=================================
+
+currentstr  maxstr 	str_potion 
+currentdex  maxdex	dex_potion
+currentatt  maxatt	att_potion 
+currentdef  maxdef 	def_potion 
+currenteb   maxeb	eb_potion
+currentgb   maxgb	gb_potion
+
+==================================
+
+
+
+
+
+
+=====================================================
+
+Once you have done that save and upload your new index.php file
+
+Now you need to find the 'templates' folder and find the file 'towns.php' (/templates/towns.php)
+
+Find a suitable location for this next line, I placed mine after the 'maps' link.
+
+  <li /><a href="index.php?do=maps">Buy Maps</a>
+  
+After add - 
+
+  <li /><a href="index.php?do=buypotions">Buy Potions</a>
+  
+
+=====================================================
+  
+Save and upload the file, Go to a town and try it out. 
+
+After that you need to add a way for the user to use the potions, go back to the main directory of the game and open up the lib.php file,
+
+find this line 
+  
+  $stattable .= "</tr><tr><td>HP</td><td>MP</td><td>TP</td></tr></table>\n";
+  
+  Replace it with this
+  
+  $stattable .= "</tr><tr><td><a title='$userrow[hp_potion] HP Potion(s)' href='index.php?do=potion:1'>HP</a></td><td><a title='$userrow[mp_potion] MP Potion(s)' href='index.php?do=potion:2'>MP</a></td><td><a title='$userrow[tp_potion] TP Potion(s)' href='index.php?do=potion:3'>TP</a></td></tr></table>\n";
+
+
+=====================================================
+
+//////////////////////////////////// Update - Horizontal Bars
+
+If your site uses the horizontal bars mod the last part will be a little more work for you than others.
+
+First up open your lib.php file and find the line 
+  
+  HP: </b>$userrow[currenthp] / $userrow[maxhp]
+  
+Replace with 
+
+  <a title='$userrow[hp_potion] HP Potion(s)' href='index.php?do=potion:1'>HP</a>: </b>$userrow[currenthp] / $userrow[maxhp]
+  
+Next Find
+
+  <b>MP: </b>$userrow[currentmp] / $userrow[maxmp]
+  
+Replace with 
+
+  <b><a title='$userrow[mp_potion] MP Potion(s)' href='index.php?do=potion:2'>MP</a>: </b>$userrow[currentmp] / $userrow[maxmp]
+  
+For the last part find
+  
+  TP: </b>$userrow[currenttp] / $userrow[maxtp]
+  
+and replace with 
+
+  <a title='$userrow[tp_potion] TP Potion(s)' href='index.php?do=potion:3'>TP</a>: </b>$userrow[currenttp] / $userrow[maxtp]
+
+

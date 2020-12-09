@@ -1,0 +1,698 @@
+$userrow["classimg"] = "<img src=\"images/classes/".$userrow["charclass"].".png\" />";
+<img src=\"images/classes/".$userrow["charclass"].".png\">{{classimg}}
+
+
+<img src="imag/{{weaponname}}.png" alt="Weapon" title="Weapon" />
+<img src="imag/{{gauntletname}}.png" alt="Gauntlet" title="Guantlets" />
+<img src="imag/{{petname}}.png" alt="Pet" title="Pet" />
+<img src="imag/{{armorname}}.png" alt="Armor" title="Armor" />
+<img src="imag/{{shieldname}}.png" alt="Shield" title="Shield" />
+<img src="imag/{{helmetname}}.png" alt="Helmet" title="Helmet" />
+<img src="imag/{{bootname}}.png" alt="Boot" title="Boot" />
+<img src="imag/{{rangeweaponsname}}.png" alt="Range & Throwing" title="Range & Throwing" />
+<img src="imag/{{magicringsname}}.png" alt="Magic Rings" title="Magic Rings" />
+
+
+========================================================
+
+
+
+<!-- THREE STEPS TO INSTALL JAVASCRIPT DICE POKER:
+
+  1.  Copy the coding into the HEAD of your HTML document
+  2.  Add the onLoad event handler into the BODY tag
+  3.  Put the last coding into the BODY of your HTML document  -->
+
+<!-- STEP ONE: Paste this code into the HEAD of your HTML document  -->
+
+<HEAD>
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://www.javascriptsource.com -->
+<!-- Original:  Tracey Uhler (tuhler@bellsouth.net ) -->
+<!-- Web Site:   http://www.geocities.com/padme67 -->
+
+<style type="text/css">
+<!--
+H1, H2, H3, H4, H5, H6 {color: #008000; font-style: code; text-align: center}
+P {color: #008000; font-style: code;}
+A:link {color:  white}
+A:visited {color:  white}
+BODY {background-color:  black;align:center;}
+td {color: #008000; font-style: code;vertical-align:top;align:right;}
+img{border:none;}
+table{align:center;}
+
+.cen{text-align:center;align:center;}
+//-->
+</style>
+
+
+<script language="javascript">
+<!--
+
+//load button images
+
+var pic=new Array();
+pic[0]=new Image();
+pic[0].src="ROLL.jpg";
+pic[1]= new Image();
+pic[1].src="ROLL1.jpg";
+pic[2]= new Image();
+pic[2].src="ROLL2.jpg";
+pic[3]= new Image();
+pic[3].src="ROLL3.jpg";
+
+//change button function
+
+function chButton(name,source){
+
+var picture=eval('document' + '.' + name);
+picture.src=source;
+	
+}
+
+//-->
+</script>
+<script language="javascript">
+<!--
+
+//////////////////////
+//Javascript Yahtzee//
+//Tracey Uhler 2002//
+////////////////////
+
+//set up variables
+
+var ck=new Array();
+var count=0;
+var score = new Array();
+var pos = new Array();
+var x = 0;
+var fld= new Array('ones','twos','threes','fours','fives','sixes');
+var dice= new Array(6);
+
+//load dice images
+
+dice[0]=new Image();
+dice[0].src="dice_one.jpg";
+dice[1]= new Image();
+dice[1].src="dice_two.jpg";
+dice[2]= new Image();
+dice[2].src="dice_three.jpg";
+dice[3]= new Image();
+dice[3].src="dice_four.jpg";
+dice[4]= new Image();
+dice[4].src="dice_five.jpg";
+dice[5]= new Image();
+dice[5].src="dice_six.jpg";
+
+
+
+//random number generator 
+
+function ranNum(){
+
+for(var i = 0; i < dice.length; i++){
+var j = Math.floor(Math.random() * dice.length);
+
+return j;
+ }
+}
+
+
+
+
+function roll(){
+
+//determine which roll
+x++;
+
+if(x > 3){
+chButton('roll','ROLL.jpg');
+alert("Please Select Where you would like your score.");
+chButton('roll','ROLL.jpg');
+calc();
+return;
+}
+else{
+if(x==1){
+chButton('roll','ROLL1.jpg');
+}
+if(x==2){
+chButton('roll','ROLL2.jpg');
+}
+if(x==3){
+chButton('roll','ROLL3.jpg');
+
+}
+
+//check for held dice
+for(var a = 0;a < document.user.box.length;a++){
+	if(document.user.box[a].checked == false){
+	pos[a] = document.user.box[a].value;
+}
+else{
+	if(document.user.box[a].checked == true){
+	pos[a] = "skip";
+	
+}
+	}
+}
+
+for(var i = 0; i < pos.length; i++){
+	var n= eval('document' + '.' + pos[i]);
+	
+	if(pos[i] == "skip"){
+}
+
+//if not held roll dice
+else{
+
+	var d=ranNum();
+
+	score[i] = (d + 1);
+
+
+	n.src=dice[d].src;
+}
+ 	}
+
+
+}
+
+}
+
+function calc(){
+//store total and check that user has rolled
+for(var i=0;i < document.user.box.length;i++){
+document.user.box[i].checked=false;
+
+}
+var a=score[0];
+var b=score[1];
+var c=score[2];
+var d=score[3];
+var e=score[4];
+var total=(a+b+c+d+e);
+return total;
+if(isNaN(total)){
+alert("Please Roll the Dice");
+}
+
+}
+
+//score for top values
+
+function ckScore(validNum,formFld){
+var t=0;
+
+var fldval=eval('document' + '.' + 'user' + '.' + formFld);
+for(var i=0;i < score.length;i++){
+if(score[i]==validNum){
+t++;
+}
+fldval.value=t*validNum;
+}
+getTotb();
+}
+
+
+//score for 3,4 and 5 of a kind
+
+function ckScoreB(times,formFld){
+chButton('roll','ROLL.jpg');
+x=0;
+var fldval=eval('document' + '.' + 'user' + '.' + formFld);
+var s=score.toString();
+for(var num=0;num <= 6;num++){
+
+var substrings = s.split(num);
+ var y= substrings.length - 1;
+
+if ((times == 5) && (y >= times)){
+fldval.value=50;
+}
+else{
+if(y >= times){
+fldval.value=calc();
+}
+}
+}
+
+getTotb();
+}
+
+
+//score for chance
+function getchance(name){
+var fldval=eval('document' + '.' + 'user' + '.' + name);
+fldval.value=calc();
+if(isNaN(fldval.value)){
+fldval.value=0;
+}
+getTotb();
+}
+
+
+//check for fullhouse
+function fullHouse(three,two,formFld){
+
+var fldval=eval('document' + '.' + 'user' + '.' + formFld);
+var s=score.toString();
+for(var num=0;num <= 6;num++){
+
+var substrings = s.split(num);
+ var b= substrings.length - 1;
+ var y= substrings.length -1;
+
+if((b >= three) && (y >= 2)){
+
+fldval.value=25;
+}
+}
+getTotb();
+}
+
+
+//check for small and large straights
+function straight(size){
+var fldval=eval('document' + '.' + 'user' + '.' + size);
+var order=score.sort();
+
+
+if(size=='small'){
+for(var i=0;i < order.length;i++){ 
+if(order[i]==order[i+1]){
+delete order[i];
+
+}
+}
+
+var s=order.toString();
+var y=s.replace(/,/g,'');
+
+
+if(((y.match(/1234/)) || (y.match(/2345/))  || (y.match(/3456/) ))){
+
+fldval.value=30;
+}
+}
+
+if(size=='large'){
+var s=order.toString();
+var a="1,2,3,4,5";
+var b="2,3,4,5,6";
+
+if((s.match(a))  || (s.match(b))){
+
+fldval.value=40;
+}
+}
+getTotb();
+}
+
+//calculate all top totals and check for bonus
+function getTot(){
+
+ var a=parseInt(document.user.elements['ones'].value);
+ var b=parseInt(document.user.elements['twos'].value);
+ var c=parseInt(document.user.elements['threes'].value);
+ var d=parseInt(document.user.elements['fours'].value);
+ var e=parseInt(document.user.elements['fives'].value);
+ var f=parseInt(document.user.elements['sixes'].value);
+ 
+var bonus=document.user.elements['bonus'];
+var total=document.user.elements['totalTop'];
+var sub=(a+b+c+d+e+f);
+
+document.user.elements['subTotal'].value=sub;
+if(sub >= 63){
+bonus.value=35;
+var adval=parseInt(bonus.value);
+total.value=sub+adval;
+return total.value;
+}
+else{
+total.value=sub;
+return total.value;
+}
+
+}
+
+//tabulate all totals
+function getTotb(){
+x=0;
+chButton('roll','ROLL.jpg');
+for(var i=0;i < document.user.box.length;i++){
+document.user.box[i].checked=false;
+
+}
+var a=parseInt(document.user.elements['threek'].value);
+ var b=parseInt(document.user.elements['fourk'].value);
+ var c=parseInt(document.user.elements['fivek'].value);
+ var d=parseInt(document.user.elements['small'].value);
+ var e=parseInt(document.user.elements['large'].value);
+ var f=parseInt(document.user.elements['chance'].value);
+  var g=parseInt(document.user.elements['full'].value);
+var gt=document.user.elements['grandTotal'];
+var subT=document.user.elements['subB'];
+var sub=(a+b+c+d+e+f+g);
+subT.value=sub;
+var tt=getTot();
+gt.value=parseInt(tt)+sub;
+
+clearDice();
+}
+
+//clear dice for next roll
+function clearDice(){
+
+var n=new Array("one","two","three","four","five");
+
+for(var i=0;i < n.length;i++){
+var p=eval('document' + '.' + n[i]);
+
+p.src="dice.jpg";
+delete ck[i];
+
+}
+
+ckFrmState();
+}
+
+//check to see if game is over
+function ckFrmState(){
+count=0;
+var fm=document.user.select;
+
+for(var i = 0;i < fm.length;i++){
+if(fm[i].checked==true){
+count++;
+ck[count]=i;
+}
+}
+
+
+if(ck.length-1==fm.length){
+var msg="Game Over!" + "\n" + "Your Final Score is" + " " + document.user.elements['grandTotal'].value + "\n" + "Would you like to play again?";
+if(confirm(msg)){
+newGame();
+}
+else{
+window.location.href="index.html";
+}
+}
+}
+
+//clear all values for new game
+function newGame(){
+ck.length=0;
+chButton('roll','ROLL.jpg');
+x=0;
+count=0;
+document.user.reset();
+}
+
+
+//-->
+</script>
+
+</HEAD>
+
+<!-- STEP TWO: Insert the onLoad event handler into your BODY tag  -->
+
+<BODY onload="javascript:x=0;">
+
+<!-- STEP THREE: Copy this code into the BODY of your HTML document  -->
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://www.javascriptsource.com -->
+<!-- Original:  Tracey Uhler (tuhler@bellsouth.net ) -->
+<!-- Web Site:   http://www.geocities.com/padme67 -->
+
+<H3>JavaScript Dice Poker!</H3>
+<h4> Roll up to three times to get best score. </h4>
+<form name="user">
+<p align="center"><a href="javascript:newGame()"><img src="reset.jpg"></a></p>
+
+<table align="center">
+
+<tr>
+<td><img name="one" src="dice.jpg"></td>
+<td><img name="two" src="dice.jpg"></td>
+<td><img name="three" src="dice.jpg"></td>
+<td><img name="four" src="dice.jpg"></td>
+<td><img name="five" src="dice.jpg"></td>
+
+</tr>
+
+
+<tr>
+<td><input type="checkbox" name="box" value="one" ></td>
+<td><input type="checkbox" name="box" value="two" ></td>
+<td><input type="checkbox" name="box" value="three" ></td>
+<td><input type="checkbox" name="box" value="four" ></td>
+<td><input type="checkbox" name="box" value="five" ></td>
+</tr>
+<tr>
+<td>hold</td>
+<td>hold</td>
+<td>hold</td>
+<td>hold</td>
+<td>hold</td>
+</tr>
+</table>
+        
+<table align="center">
+
+<tr>
+<td><a href="javascript:roll()"><img src="ROLL.jpg" name="roll" ></a></td>
+
+
+
+</table>
+<table align="center">
+<tr>
+<td>
+
+
+
+
+<table align="center">
+<tr>
+<td>ONES</td>
+<td><input type="checkbox" name="select" onclick="ckScore(1,'ones')"></td>
+<td><img src="dice_one.jpg"></td>
+<td><img src="dice_one.jpg"></td>
+<td><img src="dice_one.jpg"></td>
+<td><input type="text" name="ones" value=0 disabled size="5"></td>
+
+</tr>
+<tr>
+<td >TWOS</td>
+<td><input type="checkbox" name="select" onclick="ckScore(2,'twos')"></td>
+<td ><img src="dice_two.jpg"></td>
+<td><img src="dice_two.jpg"></td>
+<td ><img src="dice_two.jpg"></td>
+<td ><input type="text" name="twos" value=0 disabled size="5"></td>
+
+</tr>
+<tr>
+<td >THREES</td>
+<td><input type="checkbox" name="select" onclick="ckScore(3,'threes')"></td>
+<td ><img src="dice_three.jpg"></td>
+<td ><img src="dice_three.jpg"></td>
+<td ><img src="dice_three.jpg"></td>
+<td><input type="text" name="threes" value=0 disabled size="5">
+</td>
+</tr>
+<tr>
+<td >FOURS</td>
+<td><input type="checkbox" name="select" onclick="ckScore(4,'fours')"></td>
+<td><img src="dice_four.jpg"></td>
+<td><img src="dice_four.jpg"></td>
+<td><img src="dice_four.jpg"></td>
+<td><input type="text" name="fours" value=0 disabled size="5">
+</td>
+</tr>
+<tr>
+<td >FIVES</td>
+<td><input type="checkbox" name="select" onclick="ckScore(5,'fives')"></td>
+<td><img src="dice_five.jpg"></td>
+<td><img src="dice_five.jpg"></td>
+<td><img src="dice_five.jpg"></td>
+<td><input type="text" name="fives" value=0 disabled size="5">
+</td>
+</tr>
+<tr>
+<td >SIXES</td>
+<td><input type="checkbox" name="select" onclick="ckScore(6,'sixes')"></td>
+<td ><img src="dice_six.jpg"></td>
+<td ><img src="dice_six.jpg"></td>
+<td ><img src="dice_six.jpg"></td>
+<td ><input type="text" name="sixes" value=0 disabled size="5">
+</td>
+</tr>
+</table>
+<table>
+<tr>
+
+<td></td>
+
+<td></td>
+<td >Subtotal</td>
+<td><input type="text" name="subTotal" value=0 disabled size="5"></td></tr>
+<tr>
+<td></td>
+<td>
+35 point bonus<br> if Subtotal equals 63+
+</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td >Bonus</td>
+<td><input type="text" value=0 name="bonus" disabled size="5">
+</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td >Total</td>
+<td><input type="text" name="totalTop" value=0 disabled size="5"></td>
+</tr>
+</table>
+</td>
+<td>
+<table>
+<tr>
+<td>
+3 OF A KIND</td>
+<td><input type="checkbox" name="select" onclick="ckScoreB(3,'threek')"></td>
+<td><img src="dice_three.jpg"></td>
+<td><img src="dice_three.jpg"></td>
+<td><img src="dice_three.jpg"></td>
+<td><img src="dice.jpg"></td>
+<td><img src="dice.jpg"></td>
+
+<td><input type="text" name="threek" disabled size="5" value=0>
+</td>
+</tr>
+<tr>
+<td>
+4 OF A KIND</td>
+<td><input type="checkbox" name="select" onclick="ckScoreB(4,'fourk')"></td>
+<td><img src="dice_four.jpg"></td>
+<td><img src="dice_four.jpg"></td>
+<td><img src="dice_four.jpg"></td>
+<td><img src="dice_four.jpg"></td>
+<td><img src="dice.jpg"></td>
+<td><input type="text" name="fourk" disabled size="5" value=0>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>
+FULL HOUSE</td>
+<td><input type="checkbox" name="select" onclick="fullHouse(3,2,'full')"></td>
+<td><img src="dice_three.jpg"></td>
+<td><img src="dice_three.jpg"></td>
+<td><img src="dice_three.jpg"></td>
+<td><img src="dice_two.jpg"></td>
+<td><img src="dice_two.jpg"></td>
+<td><input type="text" name="full" disabled size="5" value=0>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>
+SM. STRAIGHT</td>
+<td><input type="checkbox" name="select" onclick="straight('small')"></td>
+<td><img src="dice_one.jpg"></td>
+<td><img src="dice_two.jpg"></td>
+<td><img src="dice_three.jpg"></td>
+<td><img src="dice_four.jpg"></td>
+<td><img src="dice.jpg"></td>
+<td><input type="text" name="small" disabled size="5" value=0>
+</td>
+</tr>
+<tr>
+<td>
+LG STRAIGHT</td>
+<td><input type="checkbox" name="select" onclick="straight('large')"></td>
+<td><img src="dice_one.jpg"></td>
+<td><img src="dice_two.jpg"></td>
+<td><img src="dice_three.jpg"></td>
+<td><img src="dice_four.jpg"></td>
+<td><img src="dice_five.jpg"></td>
+<td><input type="text" name="large" disabled size="5" value=0></td>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>
+YAHTZEE</td>
+<td><input type="checkbox" name="select" onclick="ckScoreB(5,'fivek')"></td>
+<td><img src="dice_one.jpg"></td>
+<td><img src="dice_one.jpg"></td>
+<td><img src="dice_one.jpg"></td>
+<td><img src="dice_one.jpg"></td>
+<td><img src="dice_one.jpg"></td>
+<td><input type="text" name="fivek" disabled size="5" value=0>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>
+CHANCE</td>
+<td><input type="checkbox" name="select" onclick="getchance('chance')"></td>
+<td><img src="dice_one.jpg"></td>
+<td><img src="dice_three.jpg"></td>
+<td><img src="dice_one.jpg"></td>
+<td><img src="dice_five.jpg"></td>
+<td><img src="dice_two.jpg"></td>
+<td><input type="text" name="chance" disabled size="5" value=0>
+</td>
+<td></td>
+</tr>
+<tr>
+
+
+<td>Subtotal</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><input type="text" name="subB" value=0 disabled size=5></td>
+</tr>
+<tr>
+
+
+<td>GrandTotal</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+
+<td><input type="text" name="grandTotal" value=0 disabled size=5></td>
+</table>
+
+</td>
+</tr>
+</table>
+</form>
+
+<p><center>
+<font face="arial, helvetica" size"-2">Free JavaScripts provided<br>
+by <a href="http://javascriptsource.com">The JavaScript Source</a></font>
+</center><p>
+
+<!-- Script Size:  16.90 KB -->
+
+
+=============================================

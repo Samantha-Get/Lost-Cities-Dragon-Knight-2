@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="msvalidate.01" content="482546814423A0298C2D356F3237C2CA" />
+<meta name="application-name" content="Michael McCart"/>
+<meta name="msapplication-TileColor" content="#8c6414"/>
+<meta name="msapplication-notification" content="frequency=30;polling-uri=http://notifications.buildmypinnedsite.com/?feed=http://www.michaelmccart.com/rss.xml&amp;id=1;polling-uri2=http://notifications.buildmypinnedsite.com/?feed=http://www.michaelmccart.com/rss.xml&amp;id=2;polling-uri3=http://notifications.buildmypinnedsite.com/?feed=http://www.michaelmccart.com/rss.xml&amp;id=3;polling-uri4=http://notifications.buildmypinnedsite.com/?feed=http://www.michaelmccart.com/rss.xml&amp;id=4;polling-uri5=http://notifications.buildmypinnedsite.com/?feed=http://www.michaelmccart.com/rss.xml&amp;id=5; cycle=1"/>
+<title>Character Information</title>
+<style type="text/css">
+body {
+  background-image: url(images/background.jpg);
+  color: black;
+  font: 12px verdana;
+}
+table {
+  border-style: none;
+  padding: 0px;
+  font: 12px verdana;
+}
+td {
+  border-style: none;
+  padding: 1px;
+  vertical-align: top;
+}
+td.top {
+  border-bottom: solid 1px black;
+}
+td.left {
+  width: 200px;
+  border-right: solid 1px black;
+}
+td.right {
+  width: 200px;
+  border-left: solid 1px black;
+}
+a {
+    color: #663300;
+    text-decoration: none;
+    font-weight: normal;
+}
+a:hover {
+    color: #330000;
+}
+.small {
+  font: 10px verdana;
+}
+.highlight {
+  color: green;
+}
+.light {
+  color: #999999;
+}
+.title {
+  border: solid 1px black;
+  background-color: #eeeeee;
+  font-weight: bold;
+  font-family: Verdana, Trebuchet MS, Fantasy;
+  padding: 1px;
+  margin: 1px;
+}
+
+.titleblack {
+  border: solid 1px white;
+  background-color: #000000;
+  font-family: Verdana, Trebuchet MS, Fantasy;
+  padding: 1px;
+  margin: 1px;
+  text-decoration:none;
+}
+
+
+#map {
+	width: 501px;
+	height: 501px;
+	background-image: url(images/map.gif);
+}
+
+
+.copyright {
+  border: solid 1px black;
+  background-color: #eeeeee;
+  font: 10px verdana;
+}
+
+.titlestores {
+  color: #663300;
+  border: solid 1px white;
+  background-color: #A55A4B; 
+  font-weight:  normal;
+  padding: 3px;
+  margin: 1px;
+}
+
+.Whiteonblack {
+  color: #FFFFFF;
+  border: solid 1px white;
+  background-color: #000000; 
+  font-weight:  normal;
+  padding: 3px;
+  margin: 1px;
+}
+
+.imagetores {
+  border: solid 1px white;
+  padding: 3px;
+  margin: 2px;
+}
+</style>
+<script type="text/javascript">
+//<![CDATA[
+function openrespopup(){
+var popurl="index.php?do=resources"
+winpops=window.open(popurl,"","width=360,height=360,noscrollbars")
+}
+
+function opencharpopup(){
+var popurl="index.php?do=showchar"
+winpops=window.open(popurl,"","width=260,height=400,scrollbars")
+}
+
+function openmappopup(){
+var popurl="index.php?do=showmap"
+winpops=window.open(popurl,"","width=520,height=520,resizable=no,scrollbars=no,toolbar=no,menubar=no,location=no,directories=no")
+}
+
+function openwiki(monster){
+var popurl="index.php?do=showmonster&id=" + monster
+winpops=window.open(popurl,"","width=300,height=260,noscrollbars")
+}
+
+function dropattributespopup(){
+var popurl="Drop Attributes.html"
+winpops=window.open(popurl,"","width=260,height=400,scrollbars")
+}
+
+
+function openquestlogpopup(){
+var popurl="index.php?do=questlog"
+winpops=window.open(popurl,"","width=260,height=400,scrollbars")
+}
+
+function openchatpopup(){
+var popurl="index.php?do=babblebox"
+winpops=window.open(popurl,"","width=300,height=400,scrollbars")
+}
+</script>
+</head>
+<body><center>
+<?php
+ = <<<THEVERYENDOFYOU
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Character Information</title>
+
+<style type="text/css">
+/*<![CDATA[*/
+body {
+  background-image: url(images/background.jpg);
+  color: black;
+  font-family: Verdana, Trebuchet MS, Fantasy;
+  font-size: 10px; 
+}
+
+td, input, select, textarea {
+  font-family: Verdana, Trebuchet MS, Fantasy;
+  font-size: 10px; 
+   }
+   
+input, select, textarea {
+  font-family: Verdana, Trebuchet MS, Fantasy;
+  font-size: 10px; 
+  border-style:outset;
+  border-color:#eeeeee;
+  color:#000000;
+}
+
+table {
+  border-style: none;
+  padding: 0px;
+  font-family: Verdana, Trebuchet MS, Fantasy;
+  font-size: 10px; 
+}
+
+td {
+  border-style: none;
+  padding: 1px;
+  vertical-align: top;
+}
+
+td.top {
+  border-bottom: solid 1px black;
+}
+
+td.left {
+  width: 200px;
+  border-right: solid 1px black;
+}
+
+td.right {
+  width: 200px;
+  border-left: solid 1px black;
+}
+
+a {
+    color: #663300;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover {
+    color: #330000;
+}
+
+.small {
+  font-family: Verdana, Trebuchet MS, Fantasy;
+  font-size: 9px; 
+}
+
+.highlight {
+  color: red;
+  font-family: Verdana, Trebuchet MS, Fantasy;
+  font-size: 10px; 
+}
+
+.light {
+  color: #6a6a6a;
+  font-family: Verdana, Trebuchet MS, Fantasy;
+  font-size: 10px; 
+}
+
+
+.copyright {
+  border: solid 0px black;
+  background-color: #ffffff;
+  font-family: Verdana, Trebuchet MS, Fantasy;
+  font-size: 9px; 
+}
+
+.title {
+  border: solid 1px black;
+  background-color: #ffffff;
+  font-family: Verdana, Trebuchet MS, Fantasy;
+  font-size: 10px; 
+  padding: 1px;
+  margin: 1px;
+}
+
+
+.myButton2 {
+        -moz-box-shadow: 1px 2px 0px 0px #899599;
+        -webkit-box-shadow: 1px 2px 0px 0px #899599;
+        box-shadow: 1px 2px 0px 0px #899599;
+        background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #bab1ba));
+        background:-moz-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+        background:-webkit-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+        background:-o-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+        background:-ms-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+        background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#bab1ba',GradientType=0);
+        background-color:#ededed;
+        -moz-border-radius:7px;
+        -webkit-border-radius:7px;
+        border-radius:7px;
+        border:1px solid #d6bcd6;
+        display:inline-block;
+        cursor:pointer;
+        color:#000000;
+        font-family:Verdana;
+        font-size:10px;
+        padding:2px 12px;
+        text-decoration:none;
+        text-shadow:0px 1px 0px #e1e2ed;
+}
+.myButton2:hover {
+        background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bab1ba), color-stop(1, #ededed));
+        background:-moz-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+        background:-webkit-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+        background:-o-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+        background:-ms-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+        background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bab1ba', endColorstr='#ededed',GradientType=0);
+        background-color:#bab1ba;
+}
+.myButton2:active {
+        position:relative;
+        top:1px;
+}
+
+
+ #map {
+        width: 501px;
+        height: 501px;
+        background-image: url(images/map.gif);
+} 
+
+        .TFtable{
+                width:94%; 
+                border-collapse:collapse; 
+        }
+        .TFtable td{ 
+                padding:7px; border:#000000 1px solid;
+        }
+        /* provide some minimal visual accomodation for IE8 and below */
+        .TFtable tr{
+                background: #C0C0C0;
+        }
+        /*  Define the background color for all the ODD background rows  */
+        .TFtable tr:nth-child(odd){ 
+                background: #EBEBEB;
+        }
+        /*  Define the background color for all the EVEN background rows  */
+        .TFtable tr:nth-child(even){
+                background: #DEDEDE;
+        }
+        
+
+.tooltip {
+  border-bottom: 1px dotted #000000;
+  color: #000000; outline: none;
+  cursor: help; text-decoration: none;
+  position: relative;
+}
+.tooltip span {
+  margin-left: -999em;
+  position: absolute;
+}
+.tooltip:hover span {
+  font-family: Calibri, Tahoma, Geneva, sans-serif;
+  position: absolute;
+  left: 1em;
+  top: 2em;
+  z-index: -100;
+  margin-left: 0;
+  width: 10px;
+  /* height: 152px; */
+  border-radius: 5px 5px
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+}
+.tooltip:hover img {
+  border: 0;
+  margin: -60px 0 0 -35px;
+  float: right;
+  position: absolute;
+}
+.tooltip:hover em {
+  font-family: Candara, Tahoma, Geneva, sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  display: block;
+  padding: 0.2em 0 0.6em 0;
+}
+
+
+
+.critical { background: #FFCCAA; border: 2px solid #FF3334; }
+.help { background: #9FDAEE; border: 2px solid #2BB0D7; }
+.info { background: #9FDAEE; border: 2px solid #2BB0D7; }
+.warning { background: #FFFFAA; border: 2px solid #FFAD33; }
+
+/* .classic { background-image: url(images/items/paper300x152.png); }  */
+.classic { padding: 0.8em 1em; }
+.custom { padding: 0.5em 0.8em 0.8em 2em; }
+* html a:hover { background: transparent; }
+
+/*]]>*/
+</style>
+<style type="text/css">
+/*<![CDATA[*/
+ div.c2 {text-align: left; padding: 3px;}
+ td.c1 {text-align:right; vertical-align:middle;}
+ div.c3 {text-align:center; vertical-align:middle;}
+/*]]>*/
+</style>
+
+<script type="text/javascript">
+//<![CDATA[
+
+
+function openmappopup(){
+var popurl="index.php?do=showmap"
+winpops=window.open(popurl,"","width=520,height=520,scrollbars")
+}
+
+function openwiki(monster){
+var popurl="index.php?do=showmonster&id=" + monster
+winpops=window.open(popurl,"","width=320,height=100,scrollbars")
+}
+
+function openrespopup(){
+var popurl="index.php?do=resources"
+winpops=window.open(popurl,"","width=220,height=440,noscrollbars")
+}
+
+function opencharpopup(){
+var popurl="index.php?do=showchar"
+winpops=window.open(popurl,"","width=260,height=400,scrollbars")
+}
+
+function openmappopup(){
+var popurl="index.php?do=showmap"
+winpops=window.open(popurl,"","width=520,height=520,resizable=no,scrollbars=no,toolbar=no,menubar=no,location=no,directories=no")
+}
+
+function openquestlogpopup(){
+var popurl="index.php?do=questlog"
+winpops=window.open(popurl,"","width=260,height=400,scrollbars")
+}
+
+function openchatpopup(){
+var popurl="index.php?do=babblebox"
+winpops=window.open(popurl,"","width=300,height=400,scrollbars")
+}
+
+//]]>
+</script>
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+
+
+<span style="font-family: verdana; font-weight: normal; font-style: normal; text-decoration: none; font-size: 8pt;"> 
+  
+<table width="100%" style="border: solid 1px black" cellspacing="0" cellpadding="0">
+<tr><td colspan="4" bgcolor="#ffffff"><center><b>Drops</b></center></td></tr>
+<tr><td><b>Name</b></td><td><b>Monster Level</b></td><td><b>Attribute</b></td><td><b>Image</b></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Wizards Weed</td><td bgcolor="#ffffff" width="15%">1</td><td bgcolor="#ffffff" width="30%">Max HP +1</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Wizards Weed.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Cabbage Head</td><td  width="15%">1</td><td  width="30%">Max MP +1</td><td width="30%"><img src="images/drops/Cabbage Head.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Saddle Bags</td><td bgcolor="#ffffff" width="15%">1</td><td bgcolor="#ffffff" width="30%">Max TP +1</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Saddle Bags.png" width="33" height="33"></tr>
+
+<tr><td  width="25%">Anvil</td><td  width="15%">1</td><td  width="30%">Strength +1</td><td width="30%"><img src="images/drops/Anvil.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Wind Charm</td><td bgcolor="#ffffff" width="15%">1</td><td bgcolor="#ffffff" width="30%">Dexterity +1</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Wind Charm.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Book of Evil</td><td  width="15%">1</td><td  width="30%">Attack Power +1</td><td width="30%"><img src="images/drops/Book of Evil.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Medal</td><td bgcolor="#ffffff" width="15%">1</td><td bgcolor="#ffffff" width="30%">Defense Power +1</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Medal.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Red Rune</td><td  width="15%">1</td><td  width="30%">Gold Bonus (%) +1</td><td width="30%"><img src="images/drops/Red Rune.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Drumstick</td><td bgcolor="#ffffff" width="15%">1</td><td bgcolor="#ffffff" width="30%">Experience Bonus (%) +1</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Drumstick.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Maple Leave</td><td  width="15%">5</td><td  width="30%">Max HP +2</td><td width="30%"><img src="images/drops/Maple Leave.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Rusty Lock</td><td bgcolor="#ffffff" width="15%">5</td><td bgcolor="#ffffff" width="30%">Max MP +2</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Rusty Lock.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Clothes Bag</td><td  width="15%">5</td><td  width="30%">Max TP +2</td><td width="30%"><img src="images/drops/Clothes Bag.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Magic Potion</td><td bgcolor="#ffffff" width="15%">5</td><td bgcolor="#ffffff" width="30%">Strength +2</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Magic Potion.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Rubber Boots</td><td  width="15%">5</td><td  width="30%">Dexterity +2</td><td width="30%"><img src="images/drops/Rubber Boots.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Yellow Rune</td><td bgcolor="#ffffff" width="15%">5</td><td bgcolor="#ffffff" width="30%">Attack Power +2</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Yellow Rune.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Bronze Coin</td><td  width="15%">5</td><td  width="30%">Defense Power +2</td><td width="30%"><img src="images/drops/Bronze Coin.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Witch Hat</td><td bgcolor="#ffffff" width="15%">5</td><td bgcolor="#ffffff" width="30%">Gold Bonus (%) +2</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Witch Hat.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Necklace of Eggs</td><td  width="15%">5</td><td  width="30%">Experience Bonus (%) +2</td><td width="30%"><img src="images/drops/Necklace of Eggs.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Envy Potion</td><td bgcolor="#ffffff" width="15%">5</td><td bgcolor="#ffffff" width="30%">Max HP +2</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Envy Potion.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Bag of Potatoes</td><td  width="15%">5</td><td  width="30%">Max HP +2</td><td width="30%"><img src="images/drops/Bag of Potatoes.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Mural</td><td bgcolor="#ffffff" width="15%">5</td><td bgcolor="#ffffff" width="30%">Max MP +2</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Mural.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Candle Stick</td><td  width="15%">5</td><td  width="30%">Max TP +2</td><td width="30%"><img src="images/drops/Candle Stick.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Purple Rune</td><td bgcolor="#ffffff" width="15%">5</td><td bgcolor="#ffffff" width="30%">Strength +2</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Purple Rune.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Mage Globe</td><td  width="15%">5</td><td  width="30%">Dexterity +2</td><td width="30%"><img src="images/drops/Mage Globe.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Apple Basket</td><td bgcolor="#ffffff" width="15%">5</td><td bgcolor="#ffffff" width="30%">Attack Power +2</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Apple Basket.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Loaf of Bread</td><td  width="15%">5</td><td  width="30%">Defense Power +2</td><td width="30%"><img src="images/drops/Loaf of Bread.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">War Table</td><td bgcolor="#ffffff" width="15%">5</td><td bgcolor="#ffffff" width="30%">Gold Bonus (%) +2</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/War Table.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Grapes</td><td  width="15%">5</td><td  width="30%">Experience Bonus (%) +2</td><td width="30%"><img src="images/drops/Grapes.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Trash Bag</td><td bgcolor="#ffffff" width="15%">5</td><td bgcolor="#ffffff" width="30%">Max HP +2</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Trash Bag.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Empty Jug</td><td  width="15%">10</td><td  width="30%">Max HP +3</td><td width="30%"><img src="images/drops/Empty Jug.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Double Lucky Clover</td><td bgcolor="#ffffff" width="15%">10</td><td bgcolor="#ffffff" width="30%">Max MP +3</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Double Lucky Clover.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Silver Coin</td><td  width="15%">10</td><td  width="30%">Max TP +3</td><td width="30%"><img src="images/drops/Silver Coin.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Horse Shoe</td><td bgcolor="#ffffff" width="15%">10</td><td bgcolor="#ffffff" width="30%">Strength +3</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Horse Shoe.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Royal Scroll</td><td  width="15%">10</td><td width="30%">Dexterity +3</td><td width="30%"><img src="images/drops/Royal Scroll.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Meat</td><td bgcolor="#ffffff" width="15%">10</td><td bgcolor="#ffffff" width="30%">Attack Power +3</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Meat.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Knitting Basket</td><td  width="15%">10</td><td  width="30%">Defense Power +3</td><td width="30%"><img src="images/drops/Knitting Basket.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Sealed Scrolls</td><td bgcolor="#ffffff" width="15%">10</td><td bgcolor="#ffffff" width="30%">Gold Bonus (%) +3</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Sealed Scrolls.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Wine Bottle</td><td  width="15%">10</td><td  width="30%">Experience Bonus (%) +3</td><td width="30%"><img src="images/drops/Wine Bottle.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Mixture Bowl</td><td bgcolor="#ffffff" width="15%">10</td><td bgcolor="#ffffff" width="30%">Max HP +3</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Mixture Bowl.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Wagon Wheel</td><td  width="15%">20</td><td  width="30%">Max HP +4</td><td width="30%"><img src="images/drops/Wagon Wheel.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Mage Necklace</td><td bgcolor="#ffffff" width="15%">20</td><td bgcolor="#ffffff" width="30%">Max MP +4</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Mage Necklace.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Purple Fireflies</td><td  width="15%">20</td><td  width="30%">Max TP +4</td><td width="30%"><img src="images/drops/Purple Fireflies.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Famous Painting</td><td bgcolor="#ffffff" width="15%">20</td><td bgcolor="#ffffff" width="30%">Strength +4</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Famous Painting.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Little Pony Book</td><td  width="15%">20</td><td  width="30%">Dexterity +4</td><td width="30%"><img src="images/drops/Little Pony Book.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Batwing Potion</td><td bgcolor="#ffffff" width="15%">20</td><td bgcolor="#ffffff" width="30%">Attack Power +4</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Batwing Potion.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Adventure Book</td><td  width="15%">20</td><td  width="30%">Defense Power +4</td><td width="30%"><img src="images/drops/Adventure Book.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Treasure Chest</td><td bgcolor="#ffffff" width="15%">20</td><td bgcolor="#ffffff" width="30%">Gold Bonus (%) +4</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Treasure Chest.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Gold Coin</td><td  width="15%">30</td><td  width="30%">Experience Bonus (%) +4</td><td width="30%"><img src="images/drops/Gold Coin.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Forest Potion</td><td bgcolor="#ffffff" width="15%">30</td><td bgcolor="#ffffff" width="30%">Max HP +4</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Forest Potion.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Hammer</td><td  width="15%">30</td><td  width="30%">Max HP +5</td><td width="30%"><img src="images/drops/Hammer.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Snow White Apples</td><td bgcolor="#ffffff" width="15%">30</td><td bgcolor="#ffffff" width="30%">Max MP +5</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Snow White Apples.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Druid Cloves</td><td  width="15%">30</td><td  width="30%">Max TP +5</td><td width="30%"><img src="images/drops/Druid Cloves.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Unknown Magic</td><td bgcolor="#ffffff" width="15%">30</td><td bgcolor="#ffffff" width="30%">Strength +5</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Unknown Magic.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Viking Buckler</td><td  width="15%">30</td><td  width="30%">Dexterity +5</td><td width="30%"><img src="images/drops/Viking Buckler.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">The Kings Cup</td><td bgcolor="#ffffff" width="15%">30</td><td bgcolor="#ffffff" width="30%">Attack Power +5</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/The Kings Cup.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Magic Mushroom</td><td  width="15%">30</td><td  width="30%">Defense Power +5</td><td width="30%"><img src="images/drops/Magic Mushroom.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Matchbox</td><td bgcolor="#ffffff" width="15%">30</td><td bgcolor="#ffffff" width="30%">Gold Bonus (%) +5</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Matchbox.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Open Chest</td><td  width="15%">30</td><td  width="30%">Experience Bonus (%) +5</td><td width="30%"><img src="images/drops/Open Chest.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Mage Spice</td><td bgcolor="#ffffff" width="15%">30</td><td bgcolor="#ffffff" width="30%">Max HP +5</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Mage Spice.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Blue Rune</td><td  width="15%">40</td><td  width="30%">Max HP +10</td><td width="30%"><img src="images/drops/Blue Rune.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Book of Birth</td><td bgcolor="#ffffff" width="15%">40</td><td bgcolor="#ffffff" width="30%">Max MP +10</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Book of Birth.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Book of Faith</td><td  width="15%">40</td><td  width="30%">Max TP +10</td><td width="30%"><img src="images/drops/Book of Faith.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Empty Barrel</td><td bgcolor="#ffffff" width="15%">40</td><td bgcolor="#ffffff" width="30%">Strength +10</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Empty Barrel.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Gold Coins</td><td width="15%">40</td><td  width="30%">Dexterity +10</td><td width="30%"><img src="images/drops/Gold Coins.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Green Rune</td><td bgcolor="#ffffff" width="15%">40</td><td bgcolor="#ffffff" width="30%">Attack Power +10</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Green Rune.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Lost Key</td><td  width="15%">40</td><td  width="30%">Defense Power +10</td><td width="30%"><img src="images/drops/Lost Key.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Wheelbarrow</td><td bgcolor="#ffffff" width="15%">40</td><td bgcolor="#ffffff" width="30%">Gold Bonus (%) +10</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Wheelbarrow.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Ancient Cards</td><td  width="15%">40</td><td  width="30%">Experience Bonus (%) +10</td><td width="30%"><img src="images/drops/Ancient Cards.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Box of Fruit</td><td bgcolor="#ffffff" width="15%">40</td><td bgcolor="#ffffff" width="30%">Max HP +10</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Box of Fruit.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Ancient Scripts</td><td  width="15%">45</td><td  width="30%">Max HP +15</td><td width="30%"><img src="images/drops/Ancient Scripts.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Genie Bottle</td><td bgcolor="#ffffff" width="15%">45</td><td bgcolor="#ffffff" width="30%">Max MP +15</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Genie Bottle.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Buddha</td><td  width="15%">45</td><td  width="30%">Max TP +15</td><td width="30%"><img src="images/drops/Buddha.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Candle</td><td bgcolor="#ffffff" width="15%">45</td><td bgcolor="#ffffff" width="30%">Strength +15</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Candle.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Cog of Life</td><td  width="15%">45</td><td  width="30%">Dexterity +15</td><td width="30%"><img src="images/drops/Cog of Life.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Bale of Hay</td><td bgcolor="#ffffff" width="15%">45</td><td bgcolor="#ffffff" width="30%">Attack Power +15</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Bale of Hay.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Krafori</td><td  width="15%">45</td><td  width="30%">Defense Power +15</td><td width="30%"><img src="images/drops/Krafori.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Lost Chest</td><td bgcolor="#ffffff" width="15%">45</td><td bgcolor="#ffffff" width="30%">Gold Bonus (%) +15</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Lost Chest.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Mystic Raven</td><td  width="15%">45</td><td  width="30%">Experience Bonus (%) +15</td><td width="30%"><img src="images/drops/Mystic Raven.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Ocean Potion</td><td bgcolor="#ffffff" width="15%">45</td><td bgcolor="#ffffff" width="30%">Max HP +15</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Ocean Potion.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Quill and Ink</td><td  width="15%">50</td><td  width="30%">Max HP +20</td><td width="30%"><img src="images/drops/Quill and Ink.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Shovel</td><td bgcolor="#ffffff" width="15%">50</td><td bgcolor="#ffffff" width="30%">Max MP +20</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Shovel.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Sky Potion</td><td  width="15%">50</td><td  width="30%">Max TP +20</td><td width="30%"><img src="images/drops/Sky Potion.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">Spell Book</td><td bgcolor="#ffffff" width="15%">50</td><td bgcolor="#ffffff" width="30%">Strength +20</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/Spell Book.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Vase</td><td  width="15%">50</td><td  width="30%">Dexterity +20</td><td width="30%"><img src="images/drops/Vase.png" width="33" height="33"></td></tr>
+
+<tr><td bgcolor="#ffffff" width="25%">War Table</td><td bgcolor="#ffffff" width="15%">50</td><td bgcolor="#ffffff" width="30%">Gold Bonus (%) +20</td><td bgcolor="#ffffff" width="30%"><img src="images/drops/War Table.png" width="33" height="33"></td></tr>
+
+<tr><td  width="25%">Mural</td><td  width="15%">50</td><td  width="30%">Max MP +20</td><td width="30%"><img src="images/drops/Mural.png" width="33" height="33"></td></tr>
+</table>
+
+ </span> 
+  
+  </body>
+</html>
